@@ -1,8 +1,5 @@
 ### ELEVATOR SIMULATOR
 
-This is a elevator simulator software, made by `Chen Chen` (netId: cchen119).
-Term project of `concurrent & parallel programming`.
-
 ### HOW TO RUN
 
 The visual studio project is in the zip file `cchen.zip`. You can unzip and run it. 
