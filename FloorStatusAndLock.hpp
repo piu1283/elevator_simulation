@@ -40,14 +40,14 @@ public:
 queue<Person> FloorStatusAndLock::getNumOfPeople(int num, bool up) {
     queue<Person> res;
     if(up){
-        unique_lock<mutex> t(upMutex);
+        unique_lock<mutex> t(upMutex, try_to_lock);
         while(num > 0 && !upPerson.empty()) {
             res.push(upPerson.front());
             upPerson.pop();
         }
         t.unlock();
     }else{
-        unique_lock<mutex> t(downMutex);
+        unique_lock<mutex> t(downMutex, try_to_lock);
         while(num > 0 && !downPerson.empty()) {
             res.push(downPerson.front());
             downPerson.pop();
